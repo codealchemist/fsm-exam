@@ -40,4 +40,6 @@ email types, how we map open and link click events to email types etc.
 ● Clean code - We want to see you build this in a service oriented manner with the
 Postmark API properly abstracted.
 
-Please don’t spend more than 2-3 hours on this! If you have any questions, email us!
+## Design proposal
+
+<img src="./system-diagram.png" />
