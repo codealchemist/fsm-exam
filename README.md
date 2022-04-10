@@ -1,5 +1,39 @@
 # Version Controlled Transactional Email
 
+The system consists of:
+
+- Mailer service: a node web server that exposes a REST API to send group emails.
+- Tracker service: TODO: a node web server that exposes a REST API to track emails.
+- Admin: a React app used to send test emails to selected groups.
+- Analytics: TODO: A dashboard that renders stats for all emails sent and provides
+  comparison tools to better evaluate the results of A/B testing and the performance of
+  different email templates.
+
+There's an assumed app, which is not part of this repo, which is the source of the actions that create messages in the queue that feeds the Mailer service.
+
+## Design concepts
+
+All systems are decoupled. This allows to manage and scale them independently.
+
+Decoupling between the main app and the mailer is done by using a message queue in between.
+
+## Folders
+
+- `admin`: React admin tool.
+- `mailer`: Mailer service.
+- `tracker`: Tracker service (TODO).
+
+## Database
+
+In the proposal we use a non relational db (MongoDB for example) for a simpler design and
+matching of programming data structures in the way they are consumed.
+
+But, if a relational database must be implemented, it could look something like this:
+
+<img src="./relational-db.png" />
+
+## Challenge
+
 Let’s build a transactional email service in a node web server that:
 
 - 1. Sends Transactional Emails:
