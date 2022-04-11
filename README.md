@@ -11,6 +11,13 @@ The system consists of:
 
 There's an assumed app, which is not part of this repo, which is the source of the actions that create messages in the queue that feeds the Mailer service.
 
+## How to run it
+
+Each project folder will work with `npm start` but you can start both the Mailer service
+and the Admin at the repo root level with:
+
+`npm start`
+
 ## Design concepts
 
 All systems are decoupled. This allows to manage and scale them independently.

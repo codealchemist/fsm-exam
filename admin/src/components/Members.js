@@ -10,8 +10,8 @@ const Container = styled.div`
 const Members = ({ members }) => (
   <Container>
     {members?.map(({ name, email }) => (
-      <div>
-        <Text key={email} ellipsis={true}>
+      <div key={email}>
+        <Text ellipsis={true}>
           {name} &lt;{email}&gt;
         </Text>
       </div>
