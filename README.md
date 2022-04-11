@@ -18,6 +18,17 @@ and the Admin at the repo root level with:
 
 `npm start`
 
+In the browser, open the Admin at http://localhost:3000. You'll see:
+
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/1118293/162730617-b279f4c1-0786-432a-b18b-c91eec17e0ce.png">
+
+Click any "Send" button to send a request to the Mailer service.
+
+After receiving a response from the Mailer we can also inspect it to get a preview URL for the email 😉
+
+<img width="687" alt="image" src="https://user-images.githubusercontent.com/1118293/162731180-89935e18-c0c3-4b44-b61c-a12a0320a0df.png">
+
+
 ## Design concepts
 
 All systems are decoupled. This allows to manage and scale them independently.
