@@ -13,6 +13,12 @@ There's an assumed app, which is not part of this repo, which is the source of t
 
 ## How to run it
 
+First install dependencies for each project and at root level:
+
+```
+npm i && cd admin && npm i && cd ../mailer; npm i
+```
+
 Each project folder will work with `npm start` but you can start both the Mailer service
 and the Admin at the repo root level with:
 
