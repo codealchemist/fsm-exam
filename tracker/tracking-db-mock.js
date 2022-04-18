@@ -1,23 +1,26 @@
 const db = {
   tracking: {
-    // Template id.
-    // Changes to a template generate a new template with a new id.
-    '8de7ca1d-084e-4e6f-aaf2-2c2045832fbf': {
+    {
+      // Changes to a template generate a new template with a new id.
+      // This allows us to track every template version independently.
+      // Or we can group them by template name if required.
+      templateId: '8de7ca1d-084e-4e6f-aaf2-2c2045832fbf',
+      name: 'password-change',
+      groupId: '26e9de24-f088-4216-a0e5-21cc9e28c555',
       sent: {
         total: 100,
         byEmail: {
           'lavonne.jakubowski48@ethereal.email': 1,
-          'codealchemist@gmail.com': 1
+          'codealchemist@gmail.com': 99
         }
       },
       open: {
         total: 80,
-        byEmail: [
-          'lavonne.jakubowski48@ethereal.email',
-          'codealchemist@gmail.com'
-        ]
+        byEmail: {
+          'lavonne.jakubowski48@ethereal.email': 1,
+          'codealchemist@gmail.com': 1,
+        }
       },
-      groupId: '26e9de24-f088-4216-a0e5-21cc9e28c555',
       clicks: {
         total: 50,
         links: {
